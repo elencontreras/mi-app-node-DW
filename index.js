@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const productosRoutes = require('./routes/productosRoutes.js')
 
-
+app.use(express.json())
 app.use('/productos', productosRoutes);
 
 

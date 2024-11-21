@@ -7,8 +7,9 @@ routes.get('/obtener', productosController.obtenerProductos);
 
 routes.get('/obtener/:id', productosController.obtenerProducto);
 
-routes.post('/crear', (req, res)=>{
-    res.json({msj: 'insertar productos'})
-})
+routes.post('/crear', productosController.crearProducto);
 
+routes.put('/actualizar/:id', productosController.actualizarProducto)
+
+routes.delete('/eliminar/:id', productosController.eliminarProducto)
 module.exports = routes;
